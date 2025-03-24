@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cute Message Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6f2;
+            margin: 50px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+        }
+        h1 {
+            color: #ff4d79;
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+        button {
+            background: #ff4d79;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #ff1a5a;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>💌 Cute Message Generator 💌</h1>
+        <p id="message">Click the button for a surprise!</p>
+        <button onclick="generateMessage()">Show Message</button>
+    </div>
+
+    <script>
+        function generateMessage() {
+            const messages = [
+                "You make my world brighter just by being in it! ☀️",
+                "You're the reason my heart beats faster and my smile gets bigger. 😊",
+                "Be safe my baby, iloveyousomuch 🥰",
+                "You must be a magician because whenever I see you, everything else disappears. 💫",
+                "Your smile is my favorite place to be. 😊💖",
+                "Live, laugh, love a independent woman. 😍",
+                "I’d press 'Like' on you a million times if I could. ❤️"
+            ];
+
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            document.getElementById("message").innerText = messages[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
